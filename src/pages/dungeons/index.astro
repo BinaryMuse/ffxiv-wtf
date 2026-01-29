@@ -1,0 +1,61 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import FightCard from '../../components/FightCard.astro';
+import { expansions } from '../../lib/expansions';
+
+const allDungeons = await getCollection('dungeons');
+
+// Sort by level, then by title
+const sortedDungeons = allDungeons.sort((a, b) => {
+  if (a.data.level !== b.data.level) {
+    return a.data.level - b.data.level;
+  }
+  return a.data.title.localeCompare(b.data.title);
+});
+
+// Group by expansion
+const dungeonsByExpansion = sortedDungeons.reduce((acc, dungeon) => {
+  const exp = dungeon.data.expansion;
+  if (!acc[exp]) acc[exp] = [];
+  acc[exp].push(dungeon);
+  return acc;
+}, {} as Record<string, typeof sortedDungeons>);
+
+const expansionOrder = ['arr', 'hw', 'sb', 'shb', 'ew', 'dt'] as const;
+---
+
+<BaseLayout title="Dungeons">
+  <h1>Dungeons</h1>
+  
+  {sortedDungeons.length === 0 ? (
+    <p>No dungeons added yet. Check back soon!</p>
+  ) : (
+    expansionOrder.map(exp => {
+      const dungeons = dungeonsByExpansion[exp];
+      if (!dungeons || dungeons.length === 0) return null;
+      
+      return (
+        <section>
+          <div class="section-header">
+            <h2 class="section-title">{expansions[exp].name}</h2>
+            <span class="section-count">{dungeons.length} dungeons</span>
+          </div>
+          <div class="fights-grid">
+            {dungeons.map(dungeon => (
+              <FightCard
+                title={dungeon.data.title}
+                slug={dungeon.id}
+                type="dungeons"
+                expansion={dungeon.data.expansion}
+                difficulty={dungeon.data.difficulty}
+                level={dungeon.data.level}
+                bosses={dungeon.data.bosses}
+              />
+            ))}
+          </div>
+        </section>
+      );
+    })
+  )}
+</BaseLayout>

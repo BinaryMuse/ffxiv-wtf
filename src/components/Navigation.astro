@@ -1,0 +1,28 @@
+---
+const currentPath = Astro.url.pathname;
+
+const links = [
+  { href: '/', label: 'Home' },
+  { href: '/dungeons', label: 'Dungeons' },
+  { href: '/trials', label: 'Trials' },
+  { href: '/raids', label: 'Raids' },
+];
+
+function isActive(href: string): boolean {
+  if (href === '/') {
+    return currentPath === '/';
+  }
+  return currentPath.startsWith(href);
+}
+---
+
+<nav class="main-nav">
+  {links.map(link => (
+    <a 
+      href={link.href} 
+      class:list={['nav-link', { active: isActive(link.href) }]}
+    >
+      {link.label}
+    </a>
+  ))}
+</nav>

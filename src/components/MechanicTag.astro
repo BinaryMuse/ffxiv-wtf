@@ -1,0 +1,19 @@
+---
+import type { MechanicType } from '../lib/expansions';
+import { mechanicTypes } from '../lib/expansions';
+
+interface Props {
+  type: MechanicType;
+  showFull?: boolean;
+}
+
+const { type, showFull = false } = Astro.props;
+const mechanic = mechanicTypes[type];
+---
+
+<span 
+  class={`mechanic-tag mechanic-${type}`}
+  title={mechanic.description}
+>
+  {showFull ? mechanic.name : mechanic.abbrev}
+</span>

@@ -1,0 +1,27 @@
+---
+import { getCollection, render } from 'astro:content';
+import FightLayout from '../../layouts/FightLayout.astro';
+
+export async function getStaticPaths() {
+  const raids = await getCollection('raids');
+  return raids.map((raid) => ({
+    params: { slug: raid.id },
+    props: { raid },
+  }));
+}
+
+const { raid } = Astro.props;
+const { Content } = await render(raid);
+---
+
+<FightLayout
+  title={raid.data.title}
+  expansion={raid.data.expansion}
+  difficulty={raid.data.difficulty}
+  level={raid.data.level}
+  minIlvl={raid.data.minIlvl}
+  bosses={raid.data.bosses}
+  type="raid"
+>
+  <Content />
+</FightLayout>

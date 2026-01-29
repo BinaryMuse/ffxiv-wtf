@@ -1,0 +1,27 @@
+---
+import { getCollection, render } from 'astro:content';
+import FightLayout from '../../layouts/FightLayout.astro';
+
+export async function getStaticPaths() {
+  const trials = await getCollection('trials');
+  return trials.map((trial) => ({
+    params: { slug: trial.id },
+    props: { trial },
+  }));
+}
+
+const { trial } = Astro.props;
+const { Content } = await render(trial);
+---
+
+<FightLayout
+  title={trial.data.title}
+  expansion={trial.data.expansion}
+  difficulty={trial.data.difficulty}
+  level={trial.data.level}
+  minIlvl={trial.data.minIlvl}
+  bosses={trial.data.bosses}
+  type="trial"
+>
+  <Content />
+</FightLayout>

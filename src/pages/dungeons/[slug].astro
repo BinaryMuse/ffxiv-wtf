@@ -1,0 +1,27 @@
+---
+import { getCollection, render } from 'astro:content';
+import FightLayout from '../../layouts/FightLayout.astro';
+
+export async function getStaticPaths() {
+  const dungeons = await getCollection('dungeons');
+  return dungeons.map((dungeon) => ({
+    params: { slug: dungeon.id },
+    props: { dungeon },
+  }));
+}
+
+const { dungeon } = Astro.props;
+const { Content } = await render(dungeon);
+---
+
+<FightLayout
+  title={dungeon.data.title}
+  expansion={dungeon.data.expansion}
+  difficulty={dungeon.data.difficulty}
+  level={dungeon.data.level}
+  minIlvl={dungeon.data.minIlvl}
+  bosses={dungeon.data.bosses}
+  type="dungeon"
+>
+  <Content />
+</FightLayout>

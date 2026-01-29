@@ -1,0 +1,67 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import FightCard from '../../components/FightCard.astro';
+import { expansions } from '../../lib/expansions';
+
+const allRaids = await getCollection('raids');
+
+// Sort by level, then by difficulty, then by title
+const difficultyOrder = { normal: 0, hard: 1, extreme: 2, savage: 3, ultimate: 4 };
+const sortedRaids = allRaids.sort((a, b) => {
+  if (a.data.level !== b.data.level) {
+    return a.data.level - b.data.level;
+  }
+  const diffA = difficultyOrder[a.data.difficulty] ?? 0;
+  const diffB = difficultyOrder[b.data.difficulty] ?? 0;
+  if (diffA !== diffB) {
+    return diffA - diffB;
+  }
+  return a.data.title.localeCompare(b.data.title);
+});
+
+// Group by expansion
+const raidsByExpansion = sortedRaids.reduce((acc, raid) => {
+  const exp = raid.data.expansion;
+  if (!acc[exp]) acc[exp] = [];
+  acc[exp].push(raid);
+  return acc;
+}, {} as Record<string, typeof sortedRaids>);
+
+const expansionOrder = ['arr', 'hw', 'sb', 'shb', 'ew', 'dt'] as const;
+---
+
+<BaseLayout title="Raids">
+  <h1>Raids</h1>
+  
+  {sortedRaids.length === 0 ? (
+    <p>No raids added yet. Check back soon!</p>
+  ) : (
+    expansionOrder.map(exp => {
+      const raids = raidsByExpansion[exp];
+      if (!raids || raids.length === 0) return null;
+      
+      return (
+        <section>
+          <div class="section-header">
+            <h2 class="section-title">{expansions[exp].name}</h2>
+            <span class="section-count">{raids.length} raids</span>
+          </div>
+          <div class="fights-grid">
+            {raids.map(raid => (
+              <FightCard
+                title={raid.data.title}
+                slug={raid.id}
+                type="raids"
+                expansion={raid.data.expansion}
+                difficulty={raid.data.difficulty}
+                level={raid.data.level}
+                bosses={raid.data.bosses}
+              />
+            ))}
+          </div>
+        </section>
+      );
+    })
+  )}
+</BaseLayout>

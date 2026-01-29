@@ -1,0 +1,304 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import FightCard from '../components/FightCard.astro';
+import { expansions } from '../lib/expansions';
+
+const allDungeons = await getCollection('dungeons');
+const allTrials = await getCollection('trials');
+const allRaids = await getCollection('raids');
+
+// Combine all content for search
+const allContent = [
+  ...allDungeons.map(d => ({ ...d, contentType: 'dungeons' as const })),
+  ...allTrials.map(t => ({ ...t, contentType: 'trials' as const })),
+  ...allRaids.map(r => ({ ...r, contentType: 'raids' as const })),
+];
+
+// Get recent additions (sort by level descending as proxy for "recent")
+const recentContent = allContent
+  .sort((a, b) => b.data.level - a.data.level)
+  .slice(0, 6);
+
+// Count by type
+const counts = {
+  dungeons: allDungeons.length,
+  trials: allTrials.length,
+  raids: allRaids.length,
+  total: allContent.length,
+};
+
+// Serialize content for client-side search
+const searchData = allContent.map(item => ({
+  title: item.data.title,
+  slug: item.id,
+  type: item.contentType,
+  expansion: item.data.expansion,
+  level: item.data.level,
+  difficulty: item.data.difficulty,
+  bosses: item.data.bosses.map(b => b.name),
+}));
+---
+
+<BaseLayout title="Home">
+  <div class="hero">
+    <h1>Dungeon Notes</h1>
+    <p class="hero-subtitle">Quick reference for FFXIV dungeons, raids, and trials</p>
+  </div>
+  
+  <div class="search-container">
+    <input 
+      type="text" 
+      class="search-input" 
+      placeholder="Search fights by name, boss, or expansion..."
+      id="search-input"
+    />
+    <div id="search-results" class="search-results" style="display: none;"></div>
+  </div>
+  
+  <div class="browse-section">
+    <h2>Browse by Content Type</h2>
+    <div class="browse-grid">
+      <a href="/dungeons" class="browse-card">
+        <span class="browse-icon">🏰</span>
+        <span class="browse-title">Dungeons</span>
+        <span class="browse-count">{counts.dungeons} fights</span>
+      </a>
+      <a href="/trials" class="browse-card">
+        <span class="browse-icon">⚔️</span>
+        <span class="browse-title">Trials</span>
+        <span class="browse-count">{counts.trials} fights</span>
+      </a>
+      <a href="/raids" class="browse-card">
+        <span class="browse-icon">👥</span>
+        <span class="browse-title">Raids</span>
+        <span class="browse-count">{counts.raids} fights</span>
+      </a>
+    </div>
+  </div>
+  
+  <div class="browse-section">
+    <h2>Browse by Expansion</h2>
+    <div class="filter-tabs">
+      {Object.entries(expansions).map(([key, exp]) => (
+        <a href={`/?expansion=${key}`} class={`filter-tab expansion-${key}`}>
+          {exp.shortName}
+        </a>
+      ))}
+    </div>
+  </div>
+  
+  {recentContent.length > 0 && (
+    <section class="recent-section">
+      <div class="section-header">
+        <h2 class="section-title">High-Level Content</h2>
+      </div>
+      <div class="fights-grid">
+        {recentContent.map(item => (
+          <FightCard
+            title={item.data.title}
+            slug={item.id}
+            type={item.contentType}
+            expansion={item.data.expansion}
+            difficulty={item.data.difficulty}
+            level={item.data.level}
+            bosses={item.data.bosses}
+          />
+        ))}
+      </div>
+    </section>
+  )}
+</BaseLayout>
+
+<script define:vars={{ searchData }}>
+  const searchInput = document.getElementById('search-input');
+  const searchResults = document.getElementById('search-results');
+  
+  if (searchInput && searchResults) {
+    searchInput.addEventListener('input', (e) => {
+      const query = e.target.value.toLowerCase().trim();
+      
+      if (query.length < 2) {
+        searchResults.style.display = 'none';
+        return;
+      }
+      
+      const results = searchData.filter(item => {
+        const searchText = [
+          item.title,
+          ...item.bosses,
+          item.expansion,
+        ].join(' ').toLowerCase();
+        return searchText.includes(query);
+      }).slice(0, 8);
+      
+      if (results.length === 0) {
+        searchResults.innerHTML = '<div class="search-no-results">No results found</div>';
+      } else {
+        searchResults.innerHTML = results.map(item => `
+          <a href="/${item.type}/${item.slug}" class="search-result-item">
+            <span class="search-result-title">${item.title}</span>
+            <span class="search-result-meta">
+              <span class="meta-tag expansion-${item.expansion}">${item.expansion.toUpperCase()}</span>
+              <span class="meta-tag">Lv${item.level}</span>
+            </span>
+          </a>
+        `).join('');
+      }
+      
+      searchResults.style.display = 'block';
+    });
+    
+    // Hide results when clicking outside
+    document.addEventListener('click', (e) => {
+      if (!searchInput.contains(e.target) && !searchResults.contains(e.target)) {
+        searchResults.style.display = 'none';
+      }
+    });
+  }
+</script>
+
+<style>
+  .hero {
+    text-align: center;
+    padding: var(--space-2xl) 0;
+  }
+  
+  .hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: var(--space-sm);
+  }
+  
+  .hero-subtitle {
+    color: var(--text-secondary);
+    font-size: 1.25rem;
+  }
+  
+  .search-container {
+    position: relative;
+    max-width: 500px;
+    margin: 0 auto var(--space-2xl);
+  }
+  
+  .search-results {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: var(--bg-secondary);
+    border: 1px solid var(--border-color);
+    border-top: none;
+    border-radius: 0 0 var(--radius-md) var(--radius-md);
+    max-height: 400px;
+    overflow-y: auto;
+    z-index: 50;
+  }
+  
+  .search-result-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--space-sm) var(--space-md);
+    border-bottom: 1px solid var(--border-color);
+    color: var(--text-primary);
+    text-decoration: none;
+  }
+  
+  .search-result-item:hover {
+    background: var(--bg-tertiary);
+  }
+  
+  .search-result-item:last-child {
+    border-bottom: none;
+  }
+  
+  .search-result-title {
+    font-weight: 500;
+  }
+  
+  .search-result-meta {
+    display: flex;
+    gap: var(--space-xs);
+  }
+  
+  .search-no-results {
+    padding: var(--space-md);
+    color: var(--text-muted);
+    text-align: center;
+  }
+  
+  .browse-section {
+    margin-bottom: var(--space-2xl);
+  }
+  
+  .browse-section h2 {
+    margin-top: 0;
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+  
+  .browse-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: var(--space-md);
+  }
+  
+  .browse-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: var(--space-lg);
+    background: var(--bg-secondary);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-lg);
+    text-decoration: none;
+    color: var(--text-primary);
+    transition: all 0.15s ease;
+  }
+  
+  .browse-card:hover {
+    border-color: var(--accent-color);
+    transform: translateY(-2px);
+  }
+  
+  .browse-icon {
+    font-size: 2rem;
+    margin-bottom: var(--space-sm);
+  }
+  
+  .browse-title {
+    font-size: 1.125rem;
+    font-weight: 600;
+  }
+  
+  .browse-count {
+    color: var(--text-muted);
+    font-size: 0.875rem;
+  }
+  
+  .filter-tabs .filter-tab {
+    color: white;
+    border: none;
+  }
+  
+  .filter-tabs .expansion-arr { background: var(--expansion-arr); }
+  .filter-tabs .expansion-hw { background: var(--expansion-hw); }
+  .filter-tabs .expansion-sb { background: var(--expansion-sb); }
+  .filter-tabs .expansion-shb { background: var(--expansion-shb); }
+  .filter-tabs .expansion-ew { background: var(--expansion-ew); }
+  .filter-tabs .expansion-dt { background: var(--expansion-dt); }
+  
+  .recent-section {
+    margin-top: var(--space-xl);
+  }
+  
+  @media (max-width: 768px) {
+    .hero h1 {
+      font-size: 1.75rem;
+    }
+    
+    .hero-subtitle {
+      font-size: 1rem;
+    }
+  }
+</style>

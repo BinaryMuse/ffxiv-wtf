@@ -1,0 +1,42 @@
+---
+import { expansions } from '../lib/expansions';
+
+interface Props {
+  title: string;
+  slug: string;
+  type: 'dungeons' | 'trials' | 'raids';
+  expansion: keyof typeof expansions;
+  difficulty: string;
+  level: number;
+  bosses: { name: string }[];
+}
+
+const { title, slug, type, expansion, difficulty, level, bosses } = Astro.props;
+const expansionInfo = expansions[expansion];
+---
+
+<a href={`/${type}/${slug}`} class="fight-card">
+  <h3 class="fight-card-title">{title}</h3>
+  <div class="fight-card-meta">
+    <span class={`meta-tag expansion expansion-${expansion}`}>
+      {expansionInfo.shortName}
+    </span>
+    <span class="meta-tag">Lv{level}</span>
+    {difficulty !== 'normal' && (
+      <span class={`meta-tag difficulty-${difficulty}`}>
+        {difficulty.charAt(0).toUpperCase() + difficulty.slice(1)}
+      </span>
+    )}
+  </div>
+  <p class="fight-card-bosses">
+    {bosses.map(b => b.name).join(' • ')}
+  </p>
+</a>
+
+<style>
+  .fight-card {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+  }
+</style>

@@ -1,0 +1,45 @@
+---
+import BaseLayout from './BaseLayout.astro';
+import { expansions } from '../lib/expansions';
+
+interface Props {
+  title: string;
+  expansion: keyof typeof expansions;
+  difficulty: string;
+  level: number;
+  minIlvl?: number;
+  bosses: { name: string }[];
+  type: 'dungeon' | 'trial' | 'raid';
+}
+
+const { title, expansion, difficulty, level, minIlvl, bosses, type } = Astro.props;
+const expansionInfo = expansions[expansion];
+
+// Capitalize first letter of type for display
+const typeDisplay = type.charAt(0).toUpperCase() + type.slice(1);
+---
+
+<BaseLayout title={title}>
+  <article>
+    <header>
+      <h1>{title}</h1>
+      <div class="fight-meta">
+        <span class={`meta-tag expansion expansion-${expansion}`}>
+          {expansionInfo.name}
+        </span>
+        <span class="meta-tag">{typeDisplay}</span>
+        <span class="meta-tag">Lv{level}</span>
+        {minIlvl && <span class="meta-tag">iLvl {minIlvl}</span>}
+        {difficulty !== 'normal' && (
+          <span class={`meta-tag difficulty-${difficulty}`}>
+            {difficulty.charAt(0).toUpperCase() + difficulty.slice(1)}
+          </span>
+        )}
+      </div>
+    </header>
+    
+    <div class="prose">
+      <slot />
+    </div>
+  </article>
+</BaseLayout>

@@ -1,0 +1,462 @@
+/* CSS Reset and Base Styles */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+:root {
+  /* Base colors */
+  --bg-primary: #0d1117;
+  --bg-secondary: #161b22;
+  --bg-tertiary: #21262d;
+  --text-primary: #e6edf3;
+  --text-secondary: #8b949e;
+  --text-muted: #6e7681;
+  --border-color: #30363d;
+  --accent-color: #58a6ff;
+  
+  /* Mechanic colors */
+  --mechanic-tankbuster: #e74c3c;
+  --mechanic-raidwide: #9b59b6;
+  --mechanic-stack: #f39c12;
+  --mechanic-spread: #3498db;
+  --mechanic-gaze: #27ae60;
+  --mechanic-knockback: #1abc9c;
+  --mechanic-cleave: #e67e22;
+  --mechanic-aoe: #95a5a6;
+  --mechanic-enrage: #c0392b;
+  
+  /* Expansion colors */
+  --expansion-arr: #a0522d;
+  --expansion-hw: #4169e1;
+  --expansion-sb: #dc143c;
+  --expansion-shb: #483d8b;
+  --expansion-ew: #4682b4;
+  --expansion-dt: #228b22;
+  
+  /* Spacing */
+  --space-xs: 0.25rem;
+  --space-sm: 0.5rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2rem;
+  --space-2xl: 3rem;
+  
+  /* Typography */
+  --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif;
+  --font-mono: ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace;
+  
+  /* Border radius */
+  --radius-sm: 4px;
+  --radius-md: 6px;
+  --radius-lg: 8px;
+}
+
+html {
+  font-family: var(--font-sans);
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  line-height: 1.6;
+}
+
+body {
+  min-height: 100vh;
+}
+
+a {
+  color: var(--accent-color);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Layout */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--space-md);
+}
+
+/* Header */
+.site-header {
+  background: var(--bg-secondary);
+  border-bottom: 1px solid var(--border-color);
+  padding: var(--space-md) 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-lg);
+}
+
+.site-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.site-title:hover {
+  text-decoration: none;
+  color: var(--accent-color);
+}
+
+/* Navigation */
+.main-nav {
+  display: flex;
+  gap: var(--space-md);
+}
+
+.nav-link {
+  padding: var(--space-xs) var(--space-sm);
+  border-radius: var(--radius-sm);
+  color: var(--text-secondary);
+  font-weight: 500;
+  transition: all 0.15s ease;
+}
+
+.nav-link:hover {
+  background: var(--bg-tertiary);
+  color: var(--text-primary);
+  text-decoration: none;
+}
+
+.nav-link.active {
+  color: var(--accent-color);
+}
+
+/* Main content */
+main {
+  padding: var(--space-xl) 0;
+}
+
+/* Typography */
+h1 {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: var(--space-lg);
+}
+
+h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-top: var(--space-xl);
+  margin-bottom: var(--space-md);
+  padding-bottom: var(--space-sm);
+  border-bottom: 1px solid var(--border-color);
+}
+
+h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-top: var(--space-lg);
+  margin-bottom: var(--space-sm);
+}
+
+p {
+  margin-bottom: var(--space-md);
+}
+
+/* Fight metadata */
+.fight-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-sm);
+  margin-bottom: var(--space-lg);
+}
+
+.meta-tag {
+  display: inline-flex;
+  align-items: center;
+  padding: var(--space-xs) var(--space-sm);
+  background: var(--bg-tertiary);
+  border-radius: var(--radius-sm);
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+}
+
+.meta-tag.expansion {
+  font-weight: 600;
+}
+
+.meta-tag.expansion-arr { background: var(--expansion-arr); color: white; }
+.meta-tag.expansion-hw { background: var(--expansion-hw); color: white; }
+.meta-tag.expansion-sb { background: var(--expansion-sb); color: white; }
+.meta-tag.expansion-shb { background: var(--expansion-shb); color: white; }
+.meta-tag.expansion-ew { background: var(--expansion-ew); color: white; }
+.meta-tag.expansion-dt { background: var(--expansion-dt); color: white; }
+
+.meta-tag.difficulty-hard { background: #7c3aed; color: white; }
+.meta-tag.difficulty-extreme { background: #dc2626; color: white; }
+.meta-tag.difficulty-savage { background: #b91c1c; color: white; }
+.meta-tag.difficulty-ultimate { background: #7f1d1d; color: white; }
+
+/* Mechanic tags */
+.mechanic-tag {
+  display: inline-flex;
+  align-items: center;
+  padding: 2px 6px;
+  border-radius: var(--radius-sm);
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.mechanic-tankbuster { background: var(--mechanic-tankbuster); color: white; }
+.mechanic-raidwide { background: var(--mechanic-raidwide); color: white; }
+.mechanic-stack { background: var(--mechanic-stack); color: white; }
+.mechanic-spread { background: var(--mechanic-spread); color: white; }
+.mechanic-gaze { background: var(--mechanic-gaze); color: white; }
+.mechanic-knockback { background: var(--mechanic-knockback); color: white; }
+.mechanic-cleave { background: var(--mechanic-cleave); color: white; }
+.mechanic-aoe { background: var(--mechanic-aoe); color: white; }
+.mechanic-enrage { background: var(--mechanic-enrage); color: white; }
+
+/* Mechanic tables */
+.mechanic-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: var(--space-md) 0;
+  font-size: 0.9375rem;
+}
+
+.mechanic-table th,
+.mechanic-table td {
+  padding: var(--space-sm) var(--space-md);
+  text-align: left;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.mechanic-table th {
+  background: var(--bg-tertiary);
+  font-weight: 600;
+  color: var(--text-secondary);
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.mechanic-table tr:hover {
+  background: var(--bg-secondary);
+}
+
+.mechanic-table td:first-child {
+  font-weight: 500;
+}
+
+/* Fight cards grid */
+.fights-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: var(--space-md);
+}
+
+.fight-card {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  padding: var(--space-md);
+  transition: all 0.15s ease;
+}
+
+.fight-card:hover {
+  border-color: var(--accent-color);
+  transform: translateY(-2px);
+}
+
+.fight-card-title {
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin-bottom: var(--space-sm);
+  color: var(--text-primary);
+}
+
+.fight-card-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-xs);
+  margin-bottom: var(--space-sm);
+}
+
+.fight-card-bosses {
+  color: var(--text-secondary);
+  font-size: 0.875rem;
+}
+
+/* Search */
+.search-container {
+  margin-bottom: var(--space-xl);
+}
+
+.search-input {
+  width: 100%;
+  max-width: 400px;
+  padding: var(--space-sm) var(--space-md);
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  color: var(--text-primary);
+  font-size: 1rem;
+}
+
+.search-input:focus {
+  outline: none;
+  border-color: var(--accent-color);
+}
+
+.search-input::placeholder {
+  color: var(--text-muted);
+}
+
+/* Filter tabs */
+.filter-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-sm);
+  margin-bottom: var(--space-lg);
+}
+
+.filter-tab {
+  padding: var(--space-sm) var(--space-md);
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  color: var(--text-secondary);
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.filter-tab:hover {
+  border-color: var(--accent-color);
+  color: var(--text-primary);
+}
+
+.filter-tab.active {
+  background: var(--accent-color);
+  border-color: var(--accent-color);
+  color: white;
+}
+
+/* Section headers */
+.section-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--space-md);
+}
+
+.section-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.section-count {
+  color: var(--text-muted);
+  font-size: 0.875rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .header-content {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .main-nav {
+    flex-wrap: wrap;
+  }
+  
+  h1 {
+    font-size: 1.5rem;
+  }
+  
+  h2 {
+    font-size: 1.25rem;
+  }
+  
+  .mechanic-table {
+    font-size: 0.875rem;
+  }
+  
+  .mechanic-table th,
+  .mechanic-table td {
+    padding: var(--space-xs) var(--space-sm);
+  }
+}
+
+/* Prose styling for markdown content */
+.prose {
+  max-width: 65ch;
+}
+
+.prose h2 {
+  margin-top: var(--space-2xl);
+}
+
+.prose h3 {
+  color: var(--text-secondary);
+}
+
+.prose ul,
+.prose ol {
+  padding-left: var(--space-lg);
+  margin-bottom: var(--space-md);
+}
+
+.prose li {
+  margin-bottom: var(--space-xs);
+}
+
+.prose table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: var(--space-md) 0;
+}
+
+.prose th,
+.prose td {
+  padding: var(--space-sm) var(--space-md);
+  text-align: left;
+  border: 1px solid var(--border-color);
+}
+
+.prose th {
+  background: var(--bg-tertiary);
+  font-weight: 600;
+}
+
+.prose strong {
+  color: var(--text-primary);
+}
+
+.prose code {
+  background: var(--bg-tertiary);
+  padding: 2px 6px;
+  border-radius: var(--radius-sm);
+  font-family: var(--font-mono);
+  font-size: 0.875em;
+}
+
+/* Boss sections */
+.boss-section {
+  margin-top: var(--space-xl);
+  padding-top: var(--space-lg);
+  border-top: 1px solid var(--border-color);
+}
+
+.boss-section:first-of-type {
+  margin-top: var(--space-lg);
+  padding-top: 0;
+  border-top: none;
+}
