@@ -1,6 +1,6 @@
 # FFXIV.wtf
 
-A fast, searchable reference site for Final Fantasy XIV dungeons, raids, and trials. Quickly look up boss mechanics, telegraphed attacks, and key strategies without wading through lengthy guides.
+A fast, searchable reference site for Final Fantasy XIV dungeons, trials, and raids. Quickly look up boss mechanics, telegraphed attacks, and key strategies without wading through lengthy guides.
 
 **Live site:** [ffxiv.wtf](https://ffxiv.wtf)
 
