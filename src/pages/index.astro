@@ -15,10 +15,7 @@ const allContent = [
   ...allRaids.map((r) => ({ ...r, contentType: "raids" as const })),
 ];
 
-// Get recent additions (sort by level descending as proxy for "recent")
-const recentContent = allContent
-  .sort((a, b) => b.data.level - a.data.level)
-  .slice(0, 6);
+const highLevelContent = allContent.filter((item) => item.data.level >= 100);
 
 // Count by type
 const counts = {
@@ -123,7 +120,7 @@ const expansionData = expansions;
     </div>
     <div class="fights-grid">
       {
-        recentContent.map((item) => (
+        highLevelContent.map((item) => (
           <FightCard
             title={item.data.title}
             slug={item.id}
