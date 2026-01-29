@@ -17,6 +17,7 @@
   --text-muted: #6e7681;
   --border-color: #30363d;
   --accent-color: #58a6ff;
+  --danger-color: #f85149;
   
   /* Mechanic colors */
   --mechanic-tankbuster: #e74c3c;
@@ -300,13 +301,13 @@ p {
 
 .search-input {
   width: 100%;
-  max-width: 400px;
   padding: var(--space-sm) var(--space-md);
   background: var(--bg-secondary);
   border: 1px solid var(--border-color);
   border-radius: var(--radius-md);
   color: var(--text-primary);
   font-size: 1rem;
+  box-sizing: border-box;
 }
 
 .search-input:focus {
@@ -345,6 +346,17 @@ p {
 .filter-tab.active {
   background: var(--accent-color);
   border-color: var(--accent-color);
+  color: white;
+}
+
+.filter-tab.clear-filter {
+  background: transparent;
+  border-color: var(--danger-color);
+  color: var(--danger-color);
+}
+
+.filter-tab.clear-filter:hover {
+  background: var(--danger-color);
   color: white;
 }
 
