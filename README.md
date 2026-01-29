@@ -1,43 +1,98 @@
-# Astro Starter Kit: Minimal
+# FFXIV.wtf
 
-```sh
-npm create astro@latest -- --template minimal
+A fast, searchable reference site for Final Fantasy XIV dungeons, raids, and trials. Quickly look up boss mechanics, telegraphed attacks, and key strategies without wading through lengthy guides.
+
+**Live site:** [ffxiv.wtf](https://ffxiv.wtf)
+
+## Features
+
+- **Quick Search** - Find any fight by name, boss, or expansion
+- **Filter by Expansion** - Browse content from ARR through Dawntrail
+- **At-a-Glance Mechanics** - Color-coded mechanic types (tankbusters, raidwides, stacks, spreads, etc.)
+- **All Difficulty Levels** - Normal, Hard, Extreme, Savage, and Ultimate content
+- **Mobile Friendly** - Works great on phone for quick lookups mid-duty
+
+## Content Coverage
+
+- **Dungeons** - All 4-player dungeons from every expansion
+- **Trials** - Primals and story trials across all difficulty levels
+- **Raids** - 8-player raids including Normal, Savage, and Ultimate
+
+## Development
+
+This site is built with [Astro](https://astro.build), a static site generator optimized for content-heavy sites.
+
+### Prerequisites
+
+- Node.js 18+ 
+- npm
+
+### Getting Started
+
+```bash
+# Install dependencies
+npm install
+
+# Start the development server
+npm run dev
 ```
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+The site will be available at `http://localhost:4321`.
 
-## 🚀 Project Structure
+### Project Structure
 
-Inside of your Astro project, you'll see the following folders and files:
-
-```text
-/
-├── public/
-├── src/
-│   └── pages/
-│       └── index.astro
-└── package.json
+```
+src/
+├── content/           # Fight data in Markdown
+│   ├── dungeons/      # Dungeon markdown files
+│   ├── trials/        # Trial markdown files
+│   └── raids/         # Raid markdown files
+├── components/        # Reusable Astro components
+├── layouts/           # Page layouts
+├── pages/             # Route pages
+├── lib/               # Utility functions and data
+└── styles/            # Global CSS
 ```
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+### Adding/Editing Content
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+Fight data is stored as Markdown files with YAML frontmatter. Each file follows this structure:
 
-Any static assets, like images, can be placed in the `public/` directory.
+```markdown
+---
+title: "Dungeon Name"
+expansion: "ew"           # arr, hw, sb, shb, ew, dt
+level: 90
+difficulty: "normal"      # normal, hard, extreme, savage, ultimate
+bosses:
+  - name: "Boss Name"
+    mechanics:
+      - name: "Attack Name"
+        type: "tankbuster"  # tankbuster, raidwide, stack, spread, etc.
+        description: "What to do"
+---
 
-## 🧞 Commands
+Optional additional notes in Markdown format.
+```
 
-All commands are run from the root of the project, from a terminal:
+### Building for Production
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+```bash
+npm run build
+```
 
-## 👀 Want to learn more?
+The built site will be in the `./dist/` directory.
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+## Contributing
+
+Contributions are welcome! If you notice incorrect or missing information:
+
+1. Fork the repository
+2. Edit the relevant Markdown file in `src/content/`
+3. Submit a pull request
+
+## Legal
+
+FINAL FANTASY XIV © SQUARE ENIX CO., LTD. All Rights Reserved.
+
+This is a fan-made reference site and is not affiliated with or endorsed by Square Enix.
