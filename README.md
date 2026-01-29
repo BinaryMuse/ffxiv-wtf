@@ -64,16 +64,27 @@ title: "Dungeon Name"
 expansion: "ew"           # arr, hw, sb, shb, ew, dt
 level: 90
 difficulty: "normal"      # normal, hard, extreme, savage, ultimate
+minIlvl: 605              # optional
+patch: "6.4"              # optional
 bosses:
-  - name: "Boss Name"
-    mechanics:
-      - name: "Attack Name"
-        type: "tankbuster"  # tankbuster, raidwide, stack, spread, etc.
-        description: "What to do"
+  - name: "First Boss"
+  - name: "Second Boss"
+  - name: "Final Boss"
 ---
 
-Optional additional notes in Markdown format.
+Brief description of the dungeon/trial/raid.
+
+## First Boss
+
+| Mechanic | Type | Description |
+|----------|------|-------------|
+| Attack Name | **Tankbuster** | What to do |
+| Another Attack | **Raidwide** | AoE damage to all players |
+
+**Notes:** Any additional tips for this boss.
 ```
+
+Mechanic types include: Tankbuster, Raidwide, Stack, Spread, AoE, Cleave, Gaze, Knockback, and Enrage.
 
 ### Building for Production
 
