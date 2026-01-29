@@ -7,12 +7,14 @@ import { expansions } from "../lib/expansions";
 const allDungeons = await getCollection("dungeons");
 const allTrials = await getCollection("trials");
 const allRaids = await getCollection("raids");
+const allAllianceRaids = await getCollection("allianceraids");
 
 // Combine all content for search
 const allContent = [
   ...allDungeons.map((d) => ({ ...d, contentType: "dungeons" as const })),
   ...allTrials.map((t) => ({ ...t, contentType: "trials" as const })),
   ...allRaids.map((r) => ({ ...r, contentType: "raids" as const })),
+  ...allAllianceRaids.map((r) => ({ ...r, contentType: "allianceraids" as const })),
 ];
 
 const highLevelContent = allContent.filter((item) => item.data.level >= 100);
@@ -22,6 +24,7 @@ const counts = {
   dungeons: allDungeons.length,
   trials: allTrials.length,
   raids: allRaids.length,
+  allianceraids: allAllianceRaids.length,
   total: allContent.length,
 };
 
@@ -77,6 +80,11 @@ const expansionData = expansions;
         <span class="browse-icon">👥</span>
         <span class="browse-title">Raids</span>
         <span class="browse-count">{counts.raids} fights</span>
+      </a>
+      <a href="/allianceraids" class="browse-card">
+        <span class="browse-icon">🛡️</span>
+        <span class="browse-title">Alliance Raids</span>
+        <span class="browse-count">{counts.allianceraids} fights</span>
       </a>
     </div>
   </div>

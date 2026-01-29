@@ -9,14 +9,14 @@ A fast, searchable reference site for Final Fantasy XIV dungeons, trials, and ra
 - **Quick Search** - Find any fight by name, boss, or expansion
 - **Filter by Expansion** - Browse content from ARR through Dawntrail
 - **At-a-Glance Mechanics** - Color-coded mechanic types (tankbusters, raidwides, stacks, spreads, etc.)
-- **All Difficulty Levels** - Normal, Hard, Extreme, Savage, and Ultimate content
 - **Mobile Friendly** - Works great on phone for quick lookups mid-duty
 
 ## Content Coverage
 
 - **Dungeons** - All 4-player dungeons from every expansion
-- **Trials** - Primals and story trials across all difficulty levels
-- **Raids** - 8-player raids including Normal, Savage, and Ultimate
+- **Trials** - Primals and story trials (normal difficulty)
+- **Raids** - 8-player raids (normal difficulty)
+- **Alliance Raids** - 24-player raids from Crystal Tower through Myths of the Realm
 
 ## Development
 
@@ -46,7 +46,8 @@ src/
 ├── content/           # Fight data in Markdown
 │   ├── dungeons/      # Dungeon markdown files
 │   ├── trials/        # Trial markdown files
-│   └── raids/         # Raid markdown files
+│   ├── raids/         # 8-player raid markdown files
+│   └── allianceraids/ # 24-player raid markdown files
 ├── components/        # Reusable Astro components
 ├── layouts/           # Page layouts
 ├── pages/             # Route pages

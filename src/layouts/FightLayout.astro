@@ -9,7 +9,7 @@ interface Props {
   level: number;
   minIlvl?: number;
   bosses: { name: string }[];
-  type: 'dungeon' | 'trial' | 'raid';
+  type: 'dungeon' | 'trial' | 'raid' | 'alliance raid';
 }
 
 const { title, expansion, difficulty, level, minIlvl, bosses, type } = Astro.props;
@@ -43,3 +43,26 @@ const typeDisplay = type.charAt(0).toUpperCase() + type.slice(1);
     </div>
   </article>
 </BaseLayout>
+
+<script>
+  // Color-code mechanic types in tables
+  const mechanicColors: Record<string, string> = {
+    tankbuster: 'var(--mechanic-tankbuster)',
+    raidwide: 'var(--mechanic-raidwide)',
+    stack: 'var(--mechanic-stack)',
+    spread: 'var(--mechanic-spread)',
+    gaze: 'var(--mechanic-gaze)',
+    knockback: 'var(--mechanic-knockback)',
+    cleave: 'var(--mechanic-cleave)',
+    aoe: 'var(--mechanic-aoe)',
+    enrage: 'var(--mechanic-enrage)',
+  };
+
+  document.querySelectorAll('.prose table strong').forEach((el) => {
+    const text = el.textContent?.toLowerCase().trim() || '';
+    const color = mechanicColors[text];
+    if (color) {
+      (el as HTMLElement).style.color = color;
+    }
+  });
+</script>

@@ -4,18 +4,12 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import FightCard from '../../components/FightCard.astro';
 import { expansions } from '../../lib/expansions';
 
-const allRaids = await getCollection('raids');
+const allAllianceRaids = await getCollection('allianceraids');
 
-// Sort by level, then by difficulty, then by title
-const difficultyOrder = { normal: 0, hard: 1, extreme: 2, savage: 3, ultimate: 4 };
-const sortedRaids = allRaids.sort((a, b) => {
+// Sort by level, then by title
+const sortedRaids = allAllianceRaids.sort((a, b) => {
   if (a.data.level !== b.data.level) {
     return a.data.level - b.data.level;
-  }
-  const diffA = difficultyOrder[a.data.difficulty] ?? 0;
-  const diffB = difficultyOrder[b.data.difficulty] ?? 0;
-  if (diffA !== diffB) {
-    return diffA - diffB;
   }
   return a.data.title.localeCompare(b.data.title);
 });
@@ -31,12 +25,12 @@ const raidsByExpansion = sortedRaids.reduce((acc, raid) => {
 const expansionOrder = ['arr', 'hw', 'sb', 'shb', 'ew', 'dt'] as const;
 ---
 
-<BaseLayout title="Raids">
-  <h1>Raids</h1>
-  <p class="page-description">8-player raid content at normal difficulty.</p>
+<BaseLayout title="Alliance Raids">
+  <h1>Alliance Raids</h1>
+  <p class="page-description">24-player raids featuring epic battles and unique storylines.</p>
   
   {sortedRaids.length === 0 ? (
-    <p>No raids added yet. Check back soon!</p>
+    <p>No alliance raids added yet. Check back soon!</p>
   ) : (
     expansionOrder.map(exp => {
       const raids = raidsByExpansion[exp];
@@ -53,7 +47,7 @@ const expansionOrder = ['arr', 'hw', 'sb', 'shb', 'ew', 'dt'] as const;
               <FightCard
                 title={raid.data.title}
                 slug={raid.id}
-                type="raids"
+                type="allianceraids"
                 expansion={raid.data.expansion}
                 difficulty={raid.data.difficulty}
                 level={raid.data.level}

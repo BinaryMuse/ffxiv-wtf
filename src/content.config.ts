@@ -30,8 +30,14 @@ const raids = defineCollection({
   schema: fightSchema,
 });
 
+const allianceraids = defineCollection({
+  loader: glob({ pattern: '**/*.md', base: './src/content/allianceraids' }),
+  schema: fightSchema,
+});
+
 export const collections = {
   dungeons,
   trials,
   raids,
+  allianceraids,
 };
