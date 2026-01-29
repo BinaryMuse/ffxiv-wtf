@@ -4,7 +4,7 @@ import { defineConfig } from 'astro/config';
 // https://astro.build/config
 export default defineConfig({
   output: 'static',
-  site: 'https://dungeon-notes.example.com',
+  site: 'https://ffxiv.wtf',
   markdown: {
     shikiConfig: {
       theme: 'github-dark',
