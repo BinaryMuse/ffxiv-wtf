@@ -20,7 +20,7 @@ A three-phase fight with add management and tether mechanics in the final phase.
 | Mechanic | Type | Description |
 |----------|------|-------------|
 | Double Frontal Cleave | **Cleave** | Two-hit combo shared between both tanks - double tank recommended |
-| Nerve Gas | **AoE** | Covers 1/3 of arena with damaging ground effect + Vulnerability Down |
+| Nerve Gas | **AoE** | Covers 1/3 of arena with damaging ground effect + Vulnerability Up |
 | Secondary Head | **Tankbuster** | Tank swap required - debuffed tank dies instantly from primary head |
 | Barofield | **AoE** | At 90% HP - dangerous field around Kaliya preventing passage |
 

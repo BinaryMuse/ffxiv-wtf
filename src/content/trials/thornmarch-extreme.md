@@ -38,7 +38,7 @@ Phase 1 → Kill 1 Moogle → Phase 2 → Kill 1 Moogle → Phase 3 → Kill All
 |--------|------|----------|
 | Black Mage (Pukla Puki) | DPS | Flare - must be interrupted with direct damage (stun/silence don't work); casts meteor AoE |
 | White Mage (Kupli Kipp) | Healer | Heals other moogles - high priority |
-| Archer (Kupu Kogi) | DPS | Random attacks with dangerous stacks - use Virus |
+| Archer (Kupqu Kogi) | DPS | Random attacks with dangerous stacks - use Virus |
 | Thief (Pukna Pako) | DPS | Random target attacks |
 | Bard (Puksi Piko) | Support | Buffs nearby moogles |
 

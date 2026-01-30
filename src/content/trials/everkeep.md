@@ -2,7 +2,7 @@
 title: "Everkeep"
 expansion: "dt"
 difficulty: "normal"
-level: 100
+level: 99
 minIlvl: 680
 bosses:
   - name: "Zoraal Ja"

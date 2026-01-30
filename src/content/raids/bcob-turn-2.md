@@ -37,7 +37,7 @@ The stacking debuff from cleaves requires constant tank swaps:
 
 ## ADS (Final Boss)
 
-After defeating nodes (minimum 1 required), face the final ADS boss. It will have:
+After defeating nodes (minimum 3 required), face the final ADS boss. It will have:
 - All abilities from nodes you didn't kill
 - Passive buffs from nodes you did kill
 

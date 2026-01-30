@@ -78,7 +78,7 @@ The Traders, twin deities of commerce and death. This dual-aspected boss feature
 | Hell of Fire | **Cleave** | Half-room blast - move to safe half |
 | Wayward Soul | **AoE** | Falling spheres that create impact zones |
 | Soul's Measure | **Adds** | Adds tethered to player groups - coordinate kills |
-| Tipped Scale | **Enrage** | Players must balance arena halves to 24-24 points (players = 1 point, adds = 8 points) |
+| Tipped Scale | **Enrage** | Players must balance arena halves evenly; coordinate player positioning and add kills to keep the scale balanced |
 
 **Notes:** 
 - When lanterns are **blue**, stand in the **center**

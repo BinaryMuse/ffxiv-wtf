@@ -11,7 +11,7 @@ bosses:
 patch: "3.0"
 ---
 
-The stronghold of Nidhogg where you face the great wyrm's forces. Estinien fights alongside you in the final battle.
+The stronghold of Nidhogg where you face the great wyrm's forces.
 
 ## Rangda
 
@@ -49,9 +49,8 @@ The stronghold of Nidhogg where you face the great wyrm's forces. Estinien fight
 | The Scarlet Price | **AoE** | Fire orbs placed around the room that perform line AoE attacks |
 | The Sable Price | **Adds** | Incapacitates a non-tank player - DPS must kill it before the cast finishes or the player dies |
 | Deafening Bellow | **Raidwide** | Room-wide AoE damage |
-| Add Phase | **Adds** | Focus on killing adds quickly - Liegetail deals heavy damage to Estinien |
+| Add Phase | **Adds** | Focus on killing adds quickly |
 
-**Notes:** 
-- **If Estinien dies, the party wipes** - protect him during add phases
-- After adds die, **stack on Estinien** for a defensive shield or you will die to the following attack
-- Keep an eye on Estinien's health throughout the fight
+**Notes:**
+- Kill adds during add phases before they overwhelm the party
+- Watch for fire orb line AoEs and avoid standing in their paths

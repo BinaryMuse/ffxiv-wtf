@@ -20,10 +20,6 @@ The octopus Ultros and his partner Typhon fight together in the Coliseum. This b
 
 Players knocked off the circular arena are stunned for approximately 5 seconds and can jump back. If all party members fall off simultaneously, it's a wipe.
 
-### HP Linking
-
-Ultros and Typhon must stay within 10% HP of each other or they'll share health pools, making it impossible to kill one before the other. Balance damage between them.
-
 ## Phase 1
 
 | Mechanic | Type | Description |
@@ -50,5 +46,4 @@ Ultros and Typhon must stay within 10% HP of each other or they'll share health 
 **Tips:**
 - Stay near arena center during Snortsault to avoid being pushed off
 - Avoid standing on the sides or behind Ultros - wind causes knockback
-- Balance damage between both bosses to avoid HP linking
 - This is a unique and fun trial - enjoy the comedic dialogue!

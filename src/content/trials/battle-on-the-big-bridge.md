@@ -19,7 +19,7 @@ A comedic 8-player trial from the Hildibrand Adventures questline. Face the lege
 |----------|------|-------------|
 | Bitter End | **Cleave** | Frontal cone cleave - tank faces away from party |
 | Pradamante | **AoE** | Untelegraphed circle AoE hitting nearby players |
-| Toad | **AoE** | Transforms one player into a frog for 20s - kite away from Enkidu |
+| Toad | **AoE** | Transforms one player into a frog for 20s - kite away from the boss |
 | Minimum | **AoE** | Applies Mini + Heavy debuffs - Gilgamesh will chase and attack |
 | Rocket Punch | **AoE** | Applies Confusion (attack allies) - heal to full to remove |
 | Grovel | - | At ~50% HP, becomes untargetable and gains damage reduction |
@@ -38,5 +38,6 @@ After adds die, Gilgamesh returns using Phase 1 abilities. **Debuffs can now app
 - Only one tank is needed for this fight
 - Charm effects cannot be removed with Esuna - consider sleeping affected players
 - Toad players should run away from the party
+- Note: Enkidu does not appear in this trial (he appears in The Dragon's Neck)
 - Multiple players can be debuffed in Phase 2 - healers be ready
 - Can be run unsynced for easy clears

@@ -6,7 +6,7 @@ level: 60
 minIlvl: 210
 bosses:
   - name: "Demon of the Tome"
-  - name: "Living Flame"
+  - name: "Liquid Flame"
   - name: "Strix"
 patch: "3.4"
 ---
@@ -25,7 +25,7 @@ Return to the Sharlayan library to face more dangerous corrupted tomes and their
 - Stay mobile to avoid the rapid book drops
 - This fight requires constant movement
 
-## Living Flame
+## Liquid Flame
 
 | Mechanic | Type | Description |
 |----------|------|-------------|

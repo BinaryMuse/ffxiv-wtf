@@ -17,17 +17,16 @@ The first Crystal Tower alliance raid, introducing 24-player content to A Realm 
 
 ## Bone Dragon
 
-The first boss encounter, fought in an arena with rising poison pools.
+The first boss encounter.
 
 | Mechanic | Type | Description |
 |----------|------|-------------|
-| Poison Floor | **AoE** | Purple poison fills lower areas - stay on raised green platforms |
 | Skeleton Adds | **Adds** | Three waves spawn - kill before they reach the dragon |
 | Resurrection | **Adds** | Dead skeletons resurrect and move toward dragon |
 | Floating Eyes | **Adds** | Spawn on final resurrection - tanks pick up, DPS focus boss |
 
 **Strategy:**
-- Tank Bone Dragon on center platform
+- Tank Bone Dragon in the center
 - Kill skeletons away from each other to slow their resurrection movement
 - Each skeleton reaching the boss deals 1,500 unblockable raid damage
 - On third resurrection, floating eyes spawn instead - tanks grab them while DPS burns boss

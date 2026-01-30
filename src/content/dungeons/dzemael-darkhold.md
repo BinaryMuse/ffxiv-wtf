@@ -18,14 +18,14 @@ A voidsent eye that can only be damaged under special conditions.
 
 | Mechanic | Type | Description |
 |----------|------|-------------|
-| Crystal Veil | **AoE** | Boss is only vulnerable while standing in purple crystal lights |
+| Crystal Veil | **AoE** | Boss is only vulnerable while standing in blue crystal lights |
 | Eyes on Me | **Raidwide** | Powerful point-blank AoE - reduced by 90% under Crystal Veil |
 | Cursed Gaze | **Gaze** | Frontal cone inflicting Amnesia or Paralysis |
 | Add Waves | **Adds** | Boss summons monsters in waves with frontal cone attacks |
 
 **Notes:** 
-- Always fight the boss under purple Crystal Veil lights
-- Crystal lights fade over time - move to the next crystal when they do
+- Always fight the boss under blue Crystal Veil lights
+- Blue crystal lights fade over time - move to the next crystal when they do
 - Stay under Crystal Veil during Eyes on Me to reduce damage by 90%
 - Later add waves have dangerous frontal cones - position carefully
 

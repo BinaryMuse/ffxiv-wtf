@@ -17,10 +17,10 @@ The Extreme version of the Ifrit trial. An 8-player encounter requiring precise 
 
 | Mechanic | Type | Description |
 |----------|------|-------------|
-| Inferno Howl | **Tankbuster** | Frontal breath applying max HP reduction - requires tank swaps |
+| Incinerate | **Tankbuster** | Frontal breath applying Suppuration (max HP reduction) - requires tank swaps |
 | Searing Wind | **AoE** | Applied to healers - causes periodic explosions, move away from party |
 | Eruption | **AoE** | Targets 3 DPS or off-tank, hits three times in succession |
-| Chains | **AoE** | Links two players - stay close to partner until resolved |
+| Infernal Fetters | **AoE** | Links two players - move APART to break the chains |
 | Radiant Plume | **AoE** | Covers arena except 2 small safe spots |
 
 ### Phase 1 (100% - ~75%)
@@ -47,7 +47,7 @@ The Extreme version of the Ifrit trial. An 8-player encounter requiring precise 
 | Mechanic | Type | Description |
 |----------|------|-------------|
 | Crimson Cyclone | **AoE** | Five images charge clockwise - run through cleared areas |
-| Chains | **AoE** | Two players linked - stay together, avoid AoEs as a pair |
+| Infernal Fetters | **AoE** | Two players linked - move apart to break the chains |
 
 ### Phase 4 (Second Nails)
 
@@ -65,9 +65,9 @@ The Extreme version of the Ifrit trial. An 8-player encounter requiring precise 
 | Hellfire x3, x4 | **Enrage** | Third and fourth Hellfire - must kill before fourth completes |
 
 **Tips:**
-- Tank swap after Inferno Howl debuff application
+- Tank swap after Incinerate debuff application
 - Healers with Searing Wind must stay away from the party
-- Players with Chains must move together to avoid AoEs
+- Players with Infernal Fetters must move apart to break the chains
 - Stagger nail kills to prevent vulnerability stack overlap
 - Save LB for the large center nail in Phase 4
 - Fourth Hellfire is the hard enrage

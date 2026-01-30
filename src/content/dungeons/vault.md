@@ -31,13 +31,13 @@ A pivotal story dungeon featuring battles against the Heavens' Ward knights in I
 
 | Mechanic | Type | Description |
 |----------|------|-------------|
-| Hyperdimensional Slash | **AoE** | Creates red line AoEs in random directions, leaving Aetherial Tears |
-| Aetherial Tears | **AoE** | Tether to and damage nearby players - stay away from them |
-| Faith Unmoving | **Knockback** | Room-wide attack with knockback - keep your back away from Aetherial Tears |
+| Hyperdimensional Slash | **AoE** | Creates red line AoEs in random directions, leaving Dimensional Torsion rifts |
+| Dimensional Torsion | **AoE** | Tether to and damage nearby players - stay away from them |
+| Faith Unmoving | **Knockback** | Room-wide attack with knockback - keep your back away from Dimensional Torsion rifts |
 | Dimensional Rift | **AoE** | Circle AoE to dodge |
 
 **Notes:** 
-- Avoid being knocked into Aetherial Tears by positioning carefully
+- Avoid being knocked into Dimensional Torsion rifts by positioning carefully
 - At low health, Grinnaux transforms
 
 ## Ser Charibert

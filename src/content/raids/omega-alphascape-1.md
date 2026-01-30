@@ -20,8 +20,8 @@ An ancient entity that cycles through Fire, Water, Earth, and Wind phases with d
 | Chaotic Dispersion | **Tankbuster** | Heavy tank buster - use cooldowns |
 | Bowels of Agony | **Raidwide** | Reduces all HP to 1 and applies debuff - healers heal immediately |
 | Damning Edict | **Knockback** | Knockback damage - stand behind the boss to avoid |
-| Longitudinal Implosion | **AoE** | Two conal AoEs - hits front/back first, then sides |
-| Latitudinal Implosion | **AoE** | Two conal AoEs - hits sides first, then front/back |
+| Longitudinal Implosion | **AoE** | Two conal AoEs hitting front and back of boss - dodge to the sides first |
+| Latitudinal Implosion | **AoE** | Two conal AoEs hitting left and right of boss - dodge to front or back first |
 | Cyclone | **Raidwide** | Heavy raid-wide AoE with debuff - heal through |
 
 ### Fire Phase (Blaze)
@@ -57,7 +57,7 @@ An ancient entity that cycles through Fire, Water, Earth, and Wind phases with d
 
 **Strategy:**
 - During Blaze, stay in the center safe zone to avoid fire damage
-- For Longitudinal, dodge sides then front/back; for Latitudinal, reverse
+- For Longitudinal, safe spots are to the sides; for Latitudinal, safe spots are front/back
 - Healers must be ready for Bowels of Agony - everyone hits 1 HP
 - Stand behind boss during Damning Edict to avoid knockback
 

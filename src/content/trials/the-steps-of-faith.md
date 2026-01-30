@@ -1,7 +1,7 @@
 ---
 title: "The Steps of Faith"
 expansion: "arr"
-difficulty: "hard"
+difficulty: "normal"
 level: 50
 minIlvl: 90
 bosses:

@@ -19,10 +19,12 @@ An undead archer, one of Edda's former companions risen from death.
 
 | Mechanic | Type | Description |
 |----------|------|-------------|
-| Void Fire | **AoE** | Targeted fire attacks |
-| Add Spawns | **Adds** | Summons additional undead |
+| Quick Nock | **AoE** | Frontal cone attack |
+| Inhumanity | **AoE** | AoE damage attack |
+| Rotting Arrow | **AoE** | Targeted ranged attacks |
+| Tantrum | **Raidwide** | Party-wide damage |
 
-**Notes:** 
+**Notes:**
 - Focus the boss while handling adds
 - Straightforward fight compared to later encounters
 

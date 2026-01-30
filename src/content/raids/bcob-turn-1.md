@@ -9,7 +9,7 @@ bosses:
 patch: "2.0"
 ---
 
-The first turn of the Binding Coil delves into the depths beneath Castrum Occidens, where adventurers encounter Caduceus, a massive two-headed snake guarding the way forward.
+The first turn of the Binding Coil delves into the depths beneath Castrum Occidens, where adventurers encounter Caduceus, a massive snake guarding the way forward.
 
 ## Caduceus
 
@@ -41,7 +41,7 @@ At 66% HP, Caduceus splits into two separate snakes.
 |----------|------|-------------|
 | Split | **Adds** | Boss divides into two snakes, each retaining Steel Scales stacks |
 | Recombination | **Enrage** | If the two halves get too close, they merge with combined stacks |
-| Synchronized Kill | **Enrage** | Both halves must die within ~20 seconds or Caduceus respawns at full HP |
+| Synchronized Kill | **Enrage** | Both halves must die within ~20 seconds or the surviving copy enrages (rapid Steel Scales stacks) |
 
 **Notes:**
 - Organize into two teams (1 Tank, 1 Healer, 2 DPS each) for the split phase

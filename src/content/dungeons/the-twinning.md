@@ -29,7 +29,7 @@ A dungeon set within the Crystal Tower, now merged with the Syrcus Trench. Playe
 
 | Mechanic | Type | Description |
 |----------|------|-------------|
-| Laserblade | **Tankbuster** | High damage on tank; use cooldowns |
+| Thunderbeam | **Tankbuster** | High damage on tank; use cooldowns |
 | Thunder Beam | **Raidwide** | Party-wide lightning damage |
 | Electric Discharge | **AoE** | Multiple lightning AoE circles appear |
 | Allagan Thunder | **AoE** | Line AoEs across the arena |

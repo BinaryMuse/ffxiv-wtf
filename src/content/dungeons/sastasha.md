@@ -38,11 +38,9 @@ The final boss, a sahagin priest.
 
 | Mechanic | Type | Description |
 |----------|------|-------------|
-| Hydroball | **Stack** | AoE centered on a player - stack to split damage |
-| Water Prison | **Adds** | Spawns bubbles that trap players - destroy them to free allies |
+| Hydroball | **AoE** | Frontal cone AoE that can inflict Silence |
 | Add Spawns | **Adds** | Summons Unnatural Ripples that spawn sahagin adds if not killed |
 
 **Notes:** 
 - Prioritize killing Unnatural Ripples before they spawn adds
-- Free players trapped in Water Prison quickly
-- Heal through Hydroball damage
+- Avoid standing in front of the boss during Hydroball

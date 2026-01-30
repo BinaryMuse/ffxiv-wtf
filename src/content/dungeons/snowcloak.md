@@ -11,7 +11,7 @@ bosses:
 patch: "2.4"
 ---
 
-An icy cavern in Coerthas Western Highlands where Lady Iceheart has taken refuge. Features mechanics involving ice and freezing.
+An icy cavern in Coerthas Central Highlands where Lady Iceheart has taken refuge. Features mechanics involving ice and freezing.
 
 ## Wandil
 

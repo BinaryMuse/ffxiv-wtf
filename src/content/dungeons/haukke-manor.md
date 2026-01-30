@@ -44,10 +44,12 @@ The final boss, the manor's former mistress who sold her soul to voidsent.
 |----------|------|-------------|
 | Void Fire | **AoE** | Interruptible fire spell |
 | Void Thunder | **AoE** | Interruptible lightning spell |
-| Lamp Spawns | **Adds** | Spawns four lamps twice during the fight - major threat |
-| Lady's Candle | **Adds** | Priority targets that buff the boss if left alive |
+| Manor Sentry | **Adds** | Spawns during the fight - has a gaze that inflicts Petrify |
+| Lady's Handmaiden | **Adds** | Spawns during the fight - applies Poison |
+| Ahriman | **Adds** | Voidsent add that spawns during the fight |
 
-**Notes:** 
+**Notes:**
 - Interrupt Void Fire and Void Thunder when possible
-- Destroy lamps quickly when they spawn - they are the primary danger in this fight
+- Kill adds quickly when they spawn - they are the primary danger in this fight
+- Look away from Manor Sentry to avoid Petrify gaze
 - Use stuns and interrupts liberally to reduce incoming damage

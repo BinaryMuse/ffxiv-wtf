@@ -5,15 +5,15 @@ difficulty: "normal"
 level: 100
 minIlvl: 715
 bosses:
-  - name: "Brute Abominator"
+  - name: "Brute Abombinator"
 patch: "7.2"
 ---
 
-The third fight of the AAC Cruiserweight raid tier in Dawntrail. The Brute Abominator is the Brute Bomber after recklessly injecting himself with multiple feral souls, becoming an abomination that must be stopped.
+The third fight of the AAC Cruiserweight raid tier in Dawntrail. The Brute Abombinator is the Brute Bomber after recklessly injecting himself with multiple feral souls, becoming an abomination that must be stopped.
 
-## Brute Abominator
+## Brute Abombinator
 
-Brute Abominator is fought across multiple arenas throughout the fight. Players can fall off to their death.
+Brute Abombinator is fought across multiple arenas throughout the fight. Players can fall off to their death.
 
 ### Phase One Mechanics
 

@@ -7,7 +7,7 @@ minIlvl: 170
 bosses:
   - name: "Faust"
   - name: "Oppressor"
-patch: "3.0"
+patch: "3.01"
 ---
 
 The first floor of Alexander: Gordias, introducing players to the mechanical marvel. Features a miniboss gauntlet followed by the Oppressor encounter with add management and coordinated DPS requirements.

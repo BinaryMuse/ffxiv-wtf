@@ -6,8 +6,8 @@ level: 60
 minIlvl: 180
 bosses:
   - name: "Achamoth"
-  - name: "Kuribu"
   - name: "Winged Lion"
+  - name: "Kuribu"
 patch: "3.2"
 ---
 
@@ -25,18 +25,6 @@ Return to the ruins of Amdapor to face new threats lurking within the overgrown 
 - Watch for the boss turning toward you - it indicates an incoming frontal cone
 - Move out of the AoE indicator quickly
 
-## Kuribu
-
-| Mechanic | Type | Description |
-|----------|------|-------------|
-| Glory | **Raidwide** | Party-wide damage requiring healing |
-| Regen | **AoE** | Healing circles appear - pull the boss out of them |
-| Add Spawns | **Adds** | Winged adds spawn that should be focused down |
-
-**Notes:** 
-- A winged golem created by Amdapori mages, animated by gems infused with white magic
-- Keep the boss out of healing circles
-
 ## Winged Lion
 
 | Mechanic | Type | Description |
@@ -46,7 +34,19 @@ Return to the ruins of Amdapor to face new threats lurking within the overgrown 
 | Stone Gaze | **Gaze** | Look away to avoid petrification |
 | Add Phase | **Adds** | Summons stone adds that must be dealt with |
 
-**Notes:** 
+**Notes:**
 - A stone guardian animated with powerful white magicks
 - Always look away during Stone Gaze
 - Throughout the dungeon, you can move enemies into circles of light to inflict debuffs
+
+## Kuribu
+
+| Mechanic | Type | Description |
+|----------|------|-------------|
+| Glory | **Raidwide** | Party-wide damage requiring healing |
+| Regen | **AoE** | Healing circles appear - pull the boss out of them |
+| Add Spawns | **Adds** | Winged adds spawn that should be focused down |
+
+**Notes:**
+- A winged golem created by Amdapori mages, animated by gems infused with white magic
+- Keep the boss out of healing circles

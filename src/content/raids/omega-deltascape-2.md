@@ -20,7 +20,7 @@ A large floating eye-creature that uses gravity-based attacks requiring mastery 
 | Evilsphere | **Tankbuster** | Heavy damage on main tank - use cooldowns |
 | Tremblor | **Raidwide** | Raid-wide AoE damage - heal through |
 | Gravitational Wave | **Raidwide** | Raid-wide AoE damage - heal through |
-| Demon Eye | **Gaze** | Damages players looking at boss - turn away when cast begins |
+| Demon Eye | **Gaze** | Applies Vulnerability Up to players looking at boss - turn away when cast begins |
 | Epicenter | **Raidwide** | Platform-wide AoE requiring heavy healing |
 | Antilight (Purple) | **AoE** | Purple orbs deal damage on ground - use Levitate to avoid |
 | Antilight (Gold) | **AoE** | Gold orbs deal damage in air - stay grounded |

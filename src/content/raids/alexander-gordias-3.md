@@ -6,7 +6,7 @@ level: 60
 minIlvl: 170
 bosses:
   - name: "Living Liquid"
-patch: "3.0"
+patch: "3.01"
 ---
 
 The third floor of Alexander: Gordias, featuring Living Liquid - a shape-shifting boss that transforms between human and hand forms. The arena is surrounded by an electric field, so avoid the edges.

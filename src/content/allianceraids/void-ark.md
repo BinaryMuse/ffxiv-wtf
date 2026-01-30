@@ -80,7 +80,7 @@ A grotesque voidsent with poison mechanics and tentacle attacks.
 
 ## Echidna
 
-A mantis-like voidsent similar to Melusine from the Binding Coil.
+A lamia-like (serpentine humanoid) voidsent similar to Melusine from the Second Coil of Bahamut.
 
 | Mechanic | Type | Description |
 |----------|------|-------------|

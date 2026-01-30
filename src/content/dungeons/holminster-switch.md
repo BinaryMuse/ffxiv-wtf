@@ -43,8 +43,8 @@ The first dungeon of Shadowbringers, set in a village overrun by sin eaters in L
 | Headcrusher | **Tankbuster** | High damage on tank; use cooldowns |
 | Scavenger's Daughter | **Raidwide** | Group-wide AoE; healers prepare |
 | Chain Down | **Adds** | Players get chained; attack chains quickly or die |
-| Pendulum | **AoE** | Proximity AoE; watch which leg boss lifts and move to opposite side of arena |
-| Left/Right Knout | **Cleave** | Half-room cleave based on raised leg |
+| Pendulum | **AoE** | Two-part proximity AoE; move away from impact points |
+| Left/Right Knout | **Cleave** | >180-degree arc cleave based on raised arm; comes in pairs |
 | Fierce Beating | **AoE** | Sequential circle AoEs; keep moving |
 
-**Notes:** Pay close attention to which leg Philia raises—this indicates which side of the arena will be safe. Chain mechanic requires fast DPS.
+**Notes:** Pay close attention to which arm Philia raises—this indicates which side of the arena will be hit (>180-degree arc). Left/Right Knout comes in pairs. Chain mechanic requires fast DPS.

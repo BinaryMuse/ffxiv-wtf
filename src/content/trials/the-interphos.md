@@ -2,38 +2,37 @@
 title: "The Interphos"
 expansion: "dt"
 difficulty: "normal"
-level: 99
-minIlvl: 680
+level: 100
+minIlvl: 670
 bosses:
-  - name: "Zoraal Ja"
+  - name: "Queen Eternal"
 patch: "7.0"
 ---
 
-The second trial of Dawntrail, where players confront Zoraal Ja, the King of Resolve, after the events at Origenics.
+The final trial of the Dawntrail MSQ, where players confront Queen Eternal (Sphene) in a climactic battle to determine the fate of Living Memory.
 
-## Zoraal Ja
+## Queen Eternal
 
-**Phase 1** (until ~30% HP):
-
-| Mechanic | Type | Description |
-|----------|------|-------------|
-| Actualize | **Raidwide** | Massive raid-wide damage; prepare defensive cooldowns |
-| Soul Overflow | **Raidwide** | Raid-wide AoE that grants Zoraal Ja stacking Damage Up buff |
-| Patricidal Pique | **Tankbuster** | Heavy tank buster; use defensive cooldowns |
-| Double-edged Swords | **Cleave** | Half-arena cleaves alternating sides; stand in first AoE telegraph, move to newly safe area |
-| Calamity's Edge | **Raidwide** | Raid-wide damage followed by circular AoEs from NPCs; move away from NPCs |
-| Vorpal Trail | **AoE** | Swords fan inward from edges, meet in middle, then fan outward; dodge as patterns resolve |
-
-**Phase 2** (distorted arena):
+**Phase 1:**
 
 | Mechanic | Type | Description |
 |----------|------|-------------|
-| Dawn of an Age | **Raidwide** | Massive raid-wide that transforms arena to central platform with four inaccessible platforms |
-| Smiting Circuit | **AoE** | Point-blank or donut AoE depending on blade spawn location |
-| Vollok | **AoE** | Swords spawn creating square AoEs on half the arena |
-| Bitter Reaping | **Tankbuster** | Dual tank buster on both tanks |
-| Gateway | **AoE** | Blue lines and moving blades interact with multi-platform arena |
-| Blade Sync | **AoE** | Blade patterns replicate across platforms via blue diagonal lines |
-| Actualize | **Raidwide** | Returns arena to normal with massive raid-wide damage |
+| Prosecution of War | **Raidwide** | Heavy raid-wide damage; mitigate and heal |
+| Legitimate Force | **Cleave** | Half-arena cleave based on which hand's sword glows; move to the non-glowing side. Comes in pairs |
+| Aethertithe | **Raidwide** | Raid-wide damage |
+| Authoritarianism | **AoE** | Line AoEs sweep across the arena from edges; find safe lanes |
+| Royal Domain | **Raidwide** | Heavy raid-wide damage requiring mitigation |
+| Dynastic Decree | **Spread** | Spread markers on all players; move apart |
+| Divide We Stand | **Stack/Spread** | Players assigned to groups for split stack or spread mechanics |
+| Endless Reign | **Tankbuster** | Multi-hit tankbuster; use defensive cooldowns |
 
-**Notes:** Arena edges have dangerous Bleeding AoE zone (uncleansable). In Phase 2, falling off the arena resets the fight. Using Trusts grants one Willful stack allowing survival of one lethal attack.
+**Phase 2** (Virtual Shift):
+
+| Mechanic | Type | Description |
+|----------|------|-------------|
+| Virtual Shift | **Raidwide** | Transforms the arena; deals raid-wide damage |
+| Absolute Authority | **AoE** | Multi-mechanic combo: spread markers, stack markers, and line AoEs resolve in sequence |
+| Perfect Devotion | **Adds** | Summons copies of herself that perform Legitimate Force patterns; identify safe halves from each clone |
+| World Shatter | **Raidwide** | Massive raid-wide damage; mitigate heavily |
+
+**Notes:** Watch which hand's sword is glowing during Legitimate Force to identify the safe half. During Absolute Authority, resolve spread first, then stack, while avoiding line AoEs. Perfect Devotion clones each cleave independently, so find the overlap of safe zones.

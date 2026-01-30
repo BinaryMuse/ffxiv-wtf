@@ -19,13 +19,14 @@ The Lady of the Vortex, primal of the Ixal beast tribe.
 | Mechanic | Type | Description |
 |----------|------|-------------|
 | Slipstream | **Cleave** | Frontal line attack - move to sides or behind Garuda |
-| Shriek | **Raidwide** | Garuda teleports and fires a devastating wave - hide behind rock pillars |
+| Mistral Song | **Raidwide** | Garuda teleports and fires a devastating wave - hide behind rock pillars |
 | Razor Plumes | **Adds** | Adds spawn after Shriek that damage pillars - destroy them quickly |
 
 **Notes:**
 - Rock pillars around the arena are essential for survival
 - Tank should keep Garuda away from pillars to prevent damage
-- Garuda performs two Shriek casts - one from north, one from south
+- Garuda performs two Mistral Song casts - one from north, one from south
+- Note: Mistral Shriek is a separate PBAoE ability (close-range AoE around Garuda)
 
 ### Phase 2
 

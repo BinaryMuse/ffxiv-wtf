@@ -52,12 +52,12 @@ The final boss, a large voidsent dragon.
 
 | Mechanic | Type | Description |
 |----------|------|-------------|
-| Imminent Catastrophe | **Gaze** | Look away from the boss to avoid Doom |
+| Imminent Catastrophe | **AoE** | Hide behind statues to line-of-sight the boss and avoid Doom |
 | Tail Drive | **Cleave** | Rear cone attack - don't stand behind |
 | Plague Dance | **AoE** | Circular AoE around the boss |
 | Add Spawns | **Adds** | Spawns void creatures throughout the fight |
 
 **Notes:** 
 - Tank should position the boss carefully for party safety
-- Look away during Imminent Catastrophe to avoid Doom debuff
+- Hide behind statues during Imminent Catastrophe to avoid Doom debuff (line-of-sight, not a gaze)
 - Avoid standing directly behind the boss due to Tail Drive

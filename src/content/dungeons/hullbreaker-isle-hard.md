@@ -28,13 +28,12 @@ Return to the pirate-infested isle to face new threats from the Maelstrom's enem
 
 | Mechanic | Type | Description |
 |----------|------|-------------|
-| Frost Breath | **Cleave** | Frontal cone attack - tank face away from party |
-| Icicle Impact | **AoE** | Drops icicles that create AoE zones |
-| Frozen Mist | **AoE** | Room-wide cold damage |
+| Blanket Thunder | **AoE** | Lightning AoE attack |
+| Megavolt | **Raidwide** | Room-wide lightning damage |
 
-**Notes:** 
-- Standard yeti-type boss mechanics
-- Avoid icicle impact zones
+**Notes:**
+- Snail-type creature with lightning-based mechanics
+- Avoid lightning AoE zones
 
 ## Grand Storm Marshal Slafyrsyn
 

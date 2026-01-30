@@ -38,12 +38,12 @@ A cyclops with no attack telegraphs - must watch the boss directly.
 | 100-Tonze Swipe | **Cleave** | Heavier frontal cone attack - stay behind the boss |
 | 100-Tonze Swing | **AoE** | Extremely powerful attack - run away immediately |
 | Glower | **AoE** | Random AoE beam on a party member - can be interrupted |
-| Eye of the Beholder | **Raidwide** | Aggro wipe with purple electricity |
+| Eye of the Beholder | **AoE** | Massive cone AoE inflicting Electrocution DoT |
 
 **Notes:** 
 - No red indicator circles - watch the boss's animations and facing
 - Always stay behind the boss to avoid Swipe attacks
-- DPS should hold back after aggro wipe so tank can regain control
+- Get behind the boss to avoid Eye of the Beholder's cone
 - Interrupt Glower if possible
 
 ## Miser's Mistress

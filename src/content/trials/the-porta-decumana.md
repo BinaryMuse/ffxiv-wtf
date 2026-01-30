@@ -5,11 +5,10 @@ difficulty: "normal"
 level: 50
 bosses:
   - name: "The Ultima Weapon"
-  - name: "Lahabrea"
-patch: "2.0"
+patch: "6.1"
 ---
 
-The climactic trial of A Realm Reborn's main story. Face the Ultima Weapon and its pilot in an 8-player spectacle fight with unskippable cutscenes.
+The climactic trial of A Realm Reborn's main story, reworked as a 4-player trial in patch 6.1. Face the Ultima Weapon in a solo-duty-style encounter.
 
 ## The Ultima Weapon
 
@@ -45,9 +44,9 @@ The Ultima Weapon cycles through abilities absorbed from the three Primals.
 | Vulcan Burst | **Knockback** | Knockback from center - move back in or use prevention |
 | Radiant Blaze | **Raidwide** | Arena-wide damage followed by cutscene |
 
-### Phase 2: Lahabrea
+### Final Phase
 
-After the cutscene, face the Ascian with new attacks.
+After the cutscene, the Ultima Weapon uses Magitek-powered attacks.
 
 | Mechanic | Type | Description |
 |----------|------|-------------|
@@ -58,7 +57,6 @@ After the cutscene, face the Ascian with new attacks.
 | Aetheric Boom | **Knockback** | Knockback attack from boss |
 
 **Notes:**
-- This trial was moved from The Praetorium dungeon in patch 6.1
+- This trial was split from The Praetorium dungeon in patch 6.1 and reworked as a 4-player trial
 - Contains unskippable story cutscenes
-- Damage requirements are only relevant in the final phase
 - Focus on dodging mechanics rather than DPS for most of the fight

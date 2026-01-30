@@ -1,7 +1,7 @@
 ---
 title: "The Fractal Continuum (Hard)"
 expansion: "sb"
-difficulty: "normal"
+difficulty: "hard"
 level: 70
 minIlvl: 310
 bosses:

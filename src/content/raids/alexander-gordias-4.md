@@ -6,7 +6,7 @@ level: 60
 minIlvl: 170
 bosses:
   - name: "The Manipulator"
-patch: "3.0"
+patch: "3.01"
 ---
 
 The fourth and final floor of Alexander: Gordias, featuring The Manipulator - a massive mechanical boss fought in three phases. Destroy its legs before attacking the main body.

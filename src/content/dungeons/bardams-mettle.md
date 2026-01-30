@@ -5,7 +5,7 @@ difficulty: "normal"
 level: 65
 minIlvl: 250
 bosses:
-  - name: "Galura"
+  - name: "Garula"
   - name: "Bardam"
   - name: "Yol"
 patch: "4.0"
@@ -13,7 +13,7 @@ patch: "4.0"
 
 The traditional Xaela trial grounds on the Azim Steppe, where warriors must prove their worth through combat and survival challenges.
 
-## Galura
+## Garula
 
 | Mechanic | Type | Description |
 |----------|------|-------------|

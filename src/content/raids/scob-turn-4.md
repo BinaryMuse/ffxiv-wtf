@@ -19,7 +19,7 @@ One of ARR's most iconic and challenging fights, testing coordination across mul
 
 | Mechanic | Type | Description |
 |----------|------|-------------|
-| Stardust | **AoE** | Random players marked with red (astral) or yellow (umbral) markers |
+| Stardust | **AoE** | Random players marked with red or yellow meteor markers |
 | Meteor Drop | **AoE** | Meteors fall dealing proximity damage - standing in them = death |
 | Ravensclaw | **Tankbuster** | Frontal cone dealing 3,000-4,000 damage to main tank |
 
@@ -66,7 +66,7 @@ One of ARR's most iconic and challenging fights, testing coordination across mul
 
 | Mechanic | Type | Description |
 |----------|------|-------------|
-| Ravensbeak | **Tankbuster** | Instant attack dealing 5,000-6,000 damage |
+| Ravensbeak | **Tankbuster** | Casted tankbuster dealing 5,000-6,000 damage; also inflicts Raven Blight |
 | Megaflare | **Raidwide** | Major raid-wide damage requiring mitigation |
 | Divebombs | **AoE** | Dragons dive across the arena - avoid their paths |
 

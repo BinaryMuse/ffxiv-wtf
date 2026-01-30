@@ -19,7 +19,7 @@ A multi-phase fight with Wild Charge and Prey mechanics requiring precise coordi
 
 | Mechanic | Type | Description |
 |----------|------|-------------|
-| Crackle Hiss | **Raidwide** | Massive frontal cleave dealing heavy raid-wide damage |
+| Crackle Hiss | **Cleave** | Massive frontal cleave dealing heavy damage |
 | Spike Flail | **Cleave** | Tail swipe - stay on boss's sides to avoid |
 | Critical Rip | **Tankbuster** | Heavy tankbuster requiring cooldowns and shields |
 

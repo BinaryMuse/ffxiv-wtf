@@ -3,7 +3,7 @@ title: "Worqor Lar Dor"
 expansion: "dt"
 difficulty: "normal"
 level: 93
-minIlvl: 655
+minIlvl: 635
 bosses:
   - name: "Valigarmanda"
 patch: "7.0"

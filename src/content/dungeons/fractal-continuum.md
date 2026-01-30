@@ -30,7 +30,7 @@ An Allagan museum facility in Azys Lla containing preserved specimens and malfun
 | Mechanic | Type | Description |
 |----------|------|-------------|
 | 11-tonze Swipe | **Cleave** | Frontal cleave with **no visual telegraph** - tanks keep boss facing away |
-| 111-tonze Swipe | **Knockback** | Circular point-blank AoE with knockback |
+| 111-tonze Swing | **Knockback** | Circular point-blank AoE with knockback |
 | Disorienting Groan | **Raidwide** | Raid-wide AoE followed by boss charging random players |
 | 10-tonze Slash | **Cleave** | Frontal cone attack after charging |
 | 1111-tonze Swipe | **Adds** | **Wipe mechanic** - must be interrupted (see notes) |

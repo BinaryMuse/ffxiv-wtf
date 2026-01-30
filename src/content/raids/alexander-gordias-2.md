@@ -6,7 +6,7 @@ level: 60
 minIlvl: 170
 bosses:
   - name: "Gordian Adds"
-patch: "3.0"
+patch: "3.01"
 ---
 
 The second floor of Alexander: Gordias, a unique gauntlet-style encounter featuring 8 waves of trash enemies rather than a traditional boss fight. Requires careful add management and use of Magitek Gobwalker suits.

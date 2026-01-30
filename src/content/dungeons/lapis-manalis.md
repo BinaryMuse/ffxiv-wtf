@@ -3,7 +3,7 @@ title: "Lapis Manalis"
 expansion: "ew"
 difficulty: "normal"
 level: 90
-minIlvl: 570
+minIlvl: 590
 bosses:
   - name: "Albion"
   - name: "Galatea Magna"

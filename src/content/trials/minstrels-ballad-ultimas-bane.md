@@ -3,6 +3,7 @@ title: "The Minstrel's Ballad: Ultima's Bane"
 expansion: "arr"
 difficulty: "extreme"
 level: 50
+minIlvl: 61
 bosses:
   - name: "Ultima Weapon"
 patch: "2.1"

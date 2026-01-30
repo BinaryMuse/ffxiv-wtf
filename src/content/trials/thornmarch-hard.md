@@ -28,7 +28,7 @@ The battle begins with waves of Moogle guards that must be defeated.
 | Mechanic | Type | Description |
 |----------|------|-------------|
 | Ruffletuft Kupta Kapa | **Adds** | Warrior moogle - 1000-koponze Swipe (cone AoE, vulnerability) |
-| Wooly Wart Kupu Kogi | **Adds** | Archer moogle - Mograin of Death targets random players |
+| Woolywart Kupqu Kogi | **Adds** | Archer moogle - Mograin of Death targets random players |
 
 #### Wave 3
 

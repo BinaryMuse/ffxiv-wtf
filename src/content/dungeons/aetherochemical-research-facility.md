@@ -7,6 +7,7 @@ minIlvl: 142
 bosses:
   - name: "Regula van Hydrus"
   - name: "Harmachis"
+  - name: "Lahabrea & Igeyorhm"
   - name: "Ascian Prime"
 patch: "3.0"
 ---
@@ -41,18 +42,33 @@ The climactic final dungeon of the Heavensward main scenario, set in an Allagan 
 - Turn away during Anti-Naga Form to avoid petrification
 - Stack for Meteor in Anti-Machina Form
 
+## Lahabrea & Igeyorhm
+
+| Mechanic | Type | Description |
+|----------|------|-------------|
+| Fire II / Blizzard II | **AoE** | Lahabrea uses fire, Igeyorhm uses ice attacks |
+| Dark Fire II / Dark Blizzard II | **AoE** | Targeted circle AoEs on players |
+| Shadow Flare | **Raidwide** | Raid-wide damage from both Ascians |
+| Esoteric Fusion | **DPS Check** | Ascians fuse together if not defeated; transitions to Ascian Prime |
+
+**Notes:**
+- The duo fight precedes the Ascian Prime encounter
+- Focus one Ascian down first while dodging the other's attacks
+- The active boss attacks while the inactive one teleports and throws column AoEs
+
 ## Ascian Prime
 
 | Mechanic | Type | Description |
 |----------|------|-------------|
-| Lahabrea Phase | **AoE** | Fire-based attacks while Igeyorhm throws column AoEs |
-| Igeyorhm Phase | **AoE** | Ice-based attacks while Lahabrea throws column AoEs |
+| Shadowflare | **Raidwide** | Raid-wide dark damage |
+| Height of Chaos | **Tankbuster** | High damage on tank |
 | Thin Ice | **AoE** | Movement causes you to slide uncontrollably in one direction |
 | Dark Orb | **AoE** | Dodge dark orb attacks |
 | Sea of Pitch | **AoE** | Avoid dark puddles on the ground |
 | Fire/Blizzard Spheres | **AoE** | Combined elemental sphere attacks |
+| Annihilation | **Raidwide** | Heavy raid-wide damage |
 
-**Notes:** 
-- Two-phase fight featuring Igeyorhm and Lahabrea sequentially
-- The active boss attacks while the inactive one teleports and throws column AoEs
+**Notes:**
+- The fused form of Lahabrea and Igeyorhm
 - Be careful moving during Thin Ice - you'll slide
+- Dodge Fire and Blizzard spheres that sweep across the arena

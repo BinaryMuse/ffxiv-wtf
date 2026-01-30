@@ -61,7 +61,7 @@ A fight with heavy emphasis on gaze mechanics and add management across multiple
 
 | Mechanic | Type | Description |
 |----------|------|-------------|
-| Lamia Prosecutor | **Adds** | Spawns with Petrification ability |
+| Lamia Prosector | **Adds** | Spawns with Petrification ability |
 | Petrification | **Gaze** | 3-second cast - look away during cast or be petrified |
 | Inherited Petrification | **Gaze** | Melusine gains Petrification after Prosecutor dies |
 

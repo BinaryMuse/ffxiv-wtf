@@ -54,11 +54,11 @@ A multi-phase finale with NPC gladiators and a beast-tamer duo.
 |----------|------|-------------|
 | NPC Group | **Adds** | Four gladiators - kill order: Silent Moss → Langloisiert → U'libho → Franz |
 | Absolute Bind | **AoE** | Chains two players in place - click spawning staff to break |
-| Tailswipe | **Cleave** | Large AoE from Narashima - stay at its sides |
-| Narashima | **Adds** | Beast that uses Tailswipe - avoid flanks |
+| Tailswipe | **Cleave** | Large AoE from Narasimha - stay at its sides |
+| Narasimha | **Adds** | Beast that uses Tailswipe - avoid flanks |
 
 **Notes:** 
 - First phase: Kill NPCs in order - healer (Silent Moss) first, tank (Franz) last
-- Second phase: Fight Mumuepo with Narashima
+- Second phase: Fight Mumuepo with Narasimha
 - Kill Mumuepo first in the final phase
 - When chained, find and click the randomly spawning staff to break free

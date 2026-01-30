@@ -42,7 +42,7 @@ A whimsical fae realm dungeon in Il Mheg, filled with mischievous pixies and dan
 | Virtuosic Capriccio | **Raidwide** | Group-wide AoE with Bleeding debuff |
 | Imp Choir | **Gaze** | Look away from boss to avoid transformation |
 | Toad Choir | **Cleave** | Unmarked frontal cone turns players into toads; get behind boss |
-| Funambulist's Fantasia | **Knockback** | Boss jumps to edge and knocks players across tightrope path |
+| Funambulist's Fantasia | **AoE** | Creates a chasm; players must navigate a narrow tightrope to reach boss before wipe cast completes |
 | Changeling's Fantasia | **AoE** | Various transformation-based attacks |
 
 **Notes:** Imp Choir requires looking away (gaze attack), while Toad Choir requires positioning behind the boss—don't confuse these two similar-sounding mechanics.
