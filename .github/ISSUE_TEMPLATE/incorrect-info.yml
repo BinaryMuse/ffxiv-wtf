@@ -1,0 +1,63 @@
+name: Report Incorrect Information
+description: Report inaccurate or outdated fight mechanics
+title: "[Correction]: "
+labels: ["correction"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for helping improve FFXIV.wtf! Please provide details about the incorrect information.
+
+  - type: dropdown
+    id: content-type
+    attributes:
+      label: Content Type
+      description: What type of content has the error?
+      options:
+        - Dungeon
+        - Trial
+        - Raid
+        - Alliance Raid
+    validations:
+      required: true
+
+  - type: input
+    id: fight-name
+    attributes:
+      label: Fight Name
+      description: Name of the dungeon, trial, or raid
+      placeholder: e.g., "Tender Valley" or "The Mothercrystal"
+    validations:
+      required: true
+
+  - type: input
+    id: boss-name
+    attributes:
+      label: Boss Name (if applicable)
+      description: Which boss has the incorrect information?
+      placeholder: e.g., "The Greatest Serpent of Tural"
+
+  - type: textarea
+    id: incorrect-info
+    attributes:
+      label: What is incorrect?
+      description: Describe what information is wrong or outdated
+      placeholder: |
+        The mechanic "Example Attack" is listed as a Tankbuster, but it's actually a Raidwide.
+    validations:
+      required: true
+
+  - type: textarea
+    id: correct-info
+    attributes:
+      label: What should it say?
+      description: If you know the correct information, please share it
+      placeholder: |
+        "Example Attack" is a party-wide AoE that requires mitigation.
+
+  - type: input
+    id: source
+    attributes:
+      label: Source (optional)
+      description: Link to a guide or video confirming the correct info
+      placeholder: https://example.com/guide

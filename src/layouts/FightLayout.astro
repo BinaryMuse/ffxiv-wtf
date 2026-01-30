@@ -41,8 +41,33 @@ const typeDisplay = type.charAt(0).toUpperCase() + type.slice(1);
     <div class="prose">
       <slot />
     </div>
+    
+    <div class="report-link">
+      <a href={`https://github.com/BinaryMuse/ffxiv-wtf/issues/new?template=incorrect-info.yml&title=${encodeURIComponent(`[Correction]: ${title}`)}`} target="_blank" rel="noopener">
+        See something wrong? Report incorrect info
+      </a>
+    </div>
   </article>
 </BaseLayout>
+
+<style>
+  .report-link {
+    margin-top: var(--space-xl);
+    padding-top: var(--space-md);
+    border-top: 1px solid var(--border-color);
+  }
+  
+  .report-link a {
+    color: var(--text-muted);
+    font-size: 0.875rem;
+    text-decoration: none;
+  }
+  
+  .report-link a:hover {
+    color: var(--accent-color);
+    text-decoration: underline;
+  }
+</style>
 
 <script>
   // Color-code mechanic types in tables
