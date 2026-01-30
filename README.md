@@ -97,7 +97,9 @@ The built site will be in the `./dist/` directory.
 
 ## Contributing
 
-Contributions are welcome! If you notice incorrect or missing information:
+Contributions are welcome! If you notice incorrect or missing information, please [report an issue](https://github.com/BinaryMuse/ffxiv-wtf/issues/new?template=incorrect-info.yml) with the details.
+
+If you'd prefer to update the content yourself:
 
 1. Fork the repository
 2. Edit the relevant Markdown file in `src/content/`
