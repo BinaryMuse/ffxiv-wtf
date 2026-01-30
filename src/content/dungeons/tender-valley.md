@@ -6,7 +6,7 @@ level: 100
 bosses:
   - name: "Barreltender"
   - name: "Anthracite"
-  - name: "Reapertail"
+  - name: "The Greatest Serpent of Tural"
 patch: "7.0"
 ---
 
@@ -38,15 +38,13 @@ An optional level 100 dungeon in Dawntrail, unlocked after completing the main s
 
 **Notes:** Learn which hole triggers which vents—the bomb color tells you which hole it's heading to. During Carniflagration, prepare to dodge multiple overlapping patterns.
 
-## Reapertail
+## The Greatest Serpent of Tural
 
 | Mechanic | Type | Description |
 |----------|------|-------------|
-| Creeping Decay | **Raidwide** | Party-wide magic damage |
-| Tail Guillotine | **Tankbuster** | Heavy tank buster |
-| Decaying Flesh | **AoE** | Ground-targeted circle AoEs |
-| Soul Douse | **Stack** | Stack marker on random player |
-| Blighted Sweep | **Cleave** | Wide conal cleave from boss |
-| Withering Curse | **Spread** | Spread markers on all players |
+| Bouncy Council | **AoE** | Summons four clones with line AoEs (blue arrows show direction). Later adds point-blank AoEs (spinning arrows). Eventually combines both patterns from corners |
+| Greatest Labyrinth | **AoE** | Applies The Greatest Curse debuff (15s); reach the glowing outer floor via moving floor tiles or die. Trace path backwards from glowing tile to find your route |
+| Moist Summoning | **Stack** | Summons add that targets random player with three sequential stack AoEs; creates puddles that apply Sludge DoT if you linger |
+| Great Torrent | **Knockback** | Sequential wave AoEs across arena with knockback from the edge; position to avoid being knocked into AoEs |
 
-**Notes:** Standard boss mechanics—position carefully for cleaves and coordinate stack/spread mechanics with the party.
+**Notes:** For Greatest Labyrinth, work backwards from the glowing destination tile to find which moving floor connects to it. During Bouncy Council combinations, identify which two clones use point-blank vs line AoEs based on their arrow indicators.
