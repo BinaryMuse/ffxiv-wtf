@@ -17,7 +17,19 @@ function isActive(href: string): boolean {
 }
 ---
 
+<!-- Hamburger button (mobile only) -->
+<button class="nav-hamburger" aria-label="Open navigation menu" aria-expanded="false">
+  <span class="hamburger-line"></span>
+  <span class="hamburger-line"></span>
+  <span class="hamburger-line"></span>
+</button>
+
+<!-- Overlay (mobile only) -->
+<div class="nav-overlay"></div>
+
+<!-- Navigation -->
 <nav class="main-nav">
+  <button class="nav-close" aria-label="Close navigation menu">&times;</button>
   {links.map(link => (
     <a 
       href={link.href} 
@@ -27,3 +39,33 @@ function isActive(href: string): boolean {
     </a>
   ))}
 </nav>
+
+<script>
+  const hamburger = document.querySelector('.nav-hamburger');
+  const nav = document.querySelector('.main-nav');
+  const overlay = document.querySelector('.nav-overlay');
+  const closeBtn = document.querySelector('.nav-close');
+
+  function openNav() {
+    nav?.classList.add('is-open');
+    overlay?.classList.add('is-visible');
+    hamburger?.setAttribute('aria-expanded', 'true');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeNav() {
+    nav?.classList.remove('is-open');
+    overlay?.classList.remove('is-visible');
+    hamburger?.setAttribute('aria-expanded', 'false');
+    document.body.style.overflow = '';
+  }
+
+  hamburger?.addEventListener('click', openNav);
+  overlay?.addEventListener('click', closeNav);
+  closeBtn?.addEventListener('click', closeNav);
+
+  // Close on escape key
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') closeNav();
+  });
+</script>

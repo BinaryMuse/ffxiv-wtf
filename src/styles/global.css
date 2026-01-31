@@ -139,6 +139,73 @@ a:hover {
   color: var(--accent-color);
 }
 
+/* Mobile nav elements - hidden on desktop */
+.nav-hamburger,
+.nav-overlay,
+.nav-close {
+  display: none;
+}
+
+/* Hamburger button */
+.nav-hamburger {
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  width: 40px;
+  height: 40px;
+  padding: 8px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.hamburger-line {
+  display: block;
+  width: 100%;
+  height: 2px;
+  background: var(--text-primary);
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+/* Nav overlay */
+.nav-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  z-index: 150;
+}
+
+.nav-overlay.is-visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Close button */
+.nav-close {
+  position: absolute;
+  top: var(--space-md);
+  right: var(--space-md);
+  width: 40px;
+  height: 40px;
+  background: transparent;
+  border: none;
+  color: var(--text-secondary);
+  font-size: 2rem;
+  cursor: pointer;
+  line-height: 1;
+}
+
+.nav-close:hover {
+  color: var(--text-primary);
+}
+
 /* Main content */
 main {
   padding: var(--space-xl) 0;
@@ -385,12 +452,59 @@ p {
 /* Responsive */
 @media (max-width: 768px) {
   .header-content {
-    flex-direction: column;
-    align-items: flex-start;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
   }
   
+  /* Show hamburger on mobile */
+  .nav-hamburger {
+    display: flex;
+  }
+  
+  /* Show overlay on mobile (visibility controlled by JS) */
+  .nav-overlay {
+    display: block;
+  }
+  
+  /* Transform nav into slideout panel */
   .main-nav {
-    flex-wrap: wrap;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 280px;
+    max-width: 80vw;
+    height: 100vh;
+    flex-direction: column;
+    gap: 0;
+    padding: var(--space-2xl) var(--space-lg);
+    background: var(--bg-secondary);
+    border-right: 1px solid var(--border-color);
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+    z-index: 200;
+    overflow-y: auto;
+  }
+  
+  .main-nav.is-open {
+    transform: translateX(0);
+  }
+  
+  /* Show close button on mobile */
+  .nav-close {
+    display: block;
+  }
+  
+  /* Adjust nav links for vertical layout */
+  .main-nav .nav-link {
+    display: block;
+    padding: var(--space-md) var(--space-sm);
+    font-size: 1.125rem;
+    border-bottom: 1px solid var(--border-color);
+  }
+  
+  .main-nav .nav-link:last-child {
+    border-bottom: none;
   }
   
   h1 {
